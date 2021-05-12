@@ -1,12 +1,12 @@
 import React from "react";
 import ButtonCss from "./Button.module.css";
 
-const Button = ({ type, onClick }) => {
+const Button = ({ disabled, type, onClick, children }) => {
   const cls = [ButtonCss.Button, ButtonCss[type]];
   return (
     <>
-      <button onClick={onClick} className={cls.join(" ")}>
-        Повторить
+      <button disabled={disabled} onClick={onClick} className={cls.join(" ")}>
+        {children}
       </button>
     </>
   );

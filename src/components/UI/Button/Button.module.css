@@ -4,6 +4,7 @@
   background: burlywood;
   border-radius: 5px;
   border: 2px solid #fff;
+  cursor: pointer;
 }
 .primary {
   background: #2884f6;

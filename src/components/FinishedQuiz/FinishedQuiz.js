@@ -2,6 +2,7 @@ import React from "react";
 import FinishedQuizCss from "./FinishedQuiz.module.css";
 import ResultQuiz from "./ResultQuiz/ResultQuiz";
 import Button from "../UI/Button/Button";
+import { Link } from "react-router-dom";
 
 const FinishedQuiz = ({ results, quiz, onRetry }) => {
   return (
@@ -17,8 +18,12 @@ const FinishedQuiz = ({ results, quiz, onRetry }) => {
       </p>
 
       <div>
-        <Button onClick={onRetry} type="primary" />
-        <Button type="success" />
+        <Button onClick={onRetry} type="primary">
+          Повторить
+        </Button>
+        <Link to="/">
+          <Button type="success">Перейти в список тестов</Button>
+        </Link>
       </div>
     </div>
   );

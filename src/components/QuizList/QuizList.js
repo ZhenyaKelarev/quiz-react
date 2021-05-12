@@ -1,12 +1,28 @@
-import React from "react";
+import React, { Component } from "react";
 import QuizListCss from "./QuizList.module.css";
+import { NavLink } from "react-router-dom";
 
-const QuizList = () => {
-  return (
-    <div className={QuizListCss.QuizList}>
-      <h1>Hello Quiz List</h1>
-    </div>
-  );
-};
+class QuizList extends Component {
+  renderQuizes() {
+    return [1, 2, 3].map((quiz, index) => {
+      return (
+        <li key={index}>
+          <NavLink to={"/quiz/" + quiz}>Test {quiz}</NavLink>
+        </li>
+      );
+    });
+  }
+
+  render() {
+    return (
+      <div className={QuizListCss.QuizList}>
+        <div>
+          <h1>Список тестов</h1>
+          <ul>{this.renderQuizes()}</ul>
+        </div>
+      </div>
+    );
+  }
+}
 
 export default QuizList;

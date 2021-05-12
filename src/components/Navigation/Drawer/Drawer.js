@@ -4,8 +4,8 @@ import Backdrop from "../../UI/Backdrop/Backdrop";
 import { NavLink } from "react-router-dom";
 
 const links = [
-  { name: "Fast quiz", link: "/" },
-  { name: "Quiz List", link: "/QuizList" },
+  { name: "Quiz Creator", link: "/QuizCreator" },
+  { name: "Quiz List", link: "/" },
   { name: "Quiz Autho", link: "/QuizAuth" },
 ];
 
@@ -24,9 +24,9 @@ class Drawer extends React.Component {
       <>
         <nav className={cls.join(" ")}>
           <ul>
-            {links.map((element) => {
+            {links.map((element, id) => {
               return (
-                <li>
+                <li key={id}>
                   <NavLink exact to={element.link} onClick={this.clickHandler}>
                     {element.name}
                   </NavLink>

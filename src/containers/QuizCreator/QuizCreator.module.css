@@ -1,0 +1,35 @@
+.QuizCreator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 100px;
+  flex-grow: 1;
+  width: 100%;
+  background: linear-gradient(90deg, #5041b2 0%, #7969e6 100%);
+}
+.QuizCreator h1 {
+  color: #fff;
+  text-align: center;
+}
+.QuizCreator form {
+  width: 80%;
+  margin: 0 auto;
+  background: #c3c;
+  padding: 20px;
+}
+.QuizCreator input {
+  padding: 5px 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+  margin: 20px 50px 20px 0px;
+  outline: none;
+}
+.QuizCreator .InputContainer {
+  display: flex;
+  flex-direction: column;
+}
+.ButtonContainer {
+  display: flex;
+  justify-content: center;
+}

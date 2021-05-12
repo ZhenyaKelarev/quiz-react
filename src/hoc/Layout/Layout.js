@@ -5,7 +5,8 @@ import Drawer from "../../components/Navigation/Drawer/Drawer";
 import { Route, Switch, Redirect } from "react-router-dom";
 import Quiz from "../../components/Quiz/Quiz";
 import QuizList from "../../components/QuizList/QuizList";
-import QuizAutho from "../../components/QuizAutho/QuizAutho";
+import Auth from "../../containers/Auth/Auth";
+import QuizCreator from "../../containers/QuizCreator/QuizCreator";
 
 class Layout extends Component {
   state = {
@@ -31,9 +32,10 @@ class Layout extends Component {
         />
         <Drawer onClose={this.menuCloseHandler} isOpen={this.state.menu} />
         <Switch>
-          <Route path="/" exact component={Quiz} />
-          <Route path="/QuizList" component={QuizList} />
-          <Route path="/QuizAuth" component={QuizAutho} />
+          <Route path="/quiz/:id" component={Quiz} />
+          <Route path="/QuizAuth" component={Auth} />
+          <Route path="/" exact component={QuizList} />
+          <Route path="/QuizCreator" exact component={QuizCreator} />
           <Redirect to="/" />
         </Switch>
       </div>

@@ -9,5 +9,19 @@
 }
 .QuizList h1 {
   color: #fff;
-  margin-left: 10px;
+}
+.QuizList ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.QuizList ul li {
+  margin-bottom: 10px;
+}
+.QuizList li a {
+  text-decoration: none;
+  color: #fff;
+}
+.QuizList li a:hover {
+  color: #363f54;
 }

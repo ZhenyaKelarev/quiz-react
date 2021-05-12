@@ -80,7 +80,6 @@ class Quiz extends Component {
   };
   onNextQuestionHandler = () => {
     if (!(this.state.activeQuestion === this.state.quiz.length)) {
-      console.log("activeQuestion", this.state.activeQuestion);
     }
   };
   isQuizFinished = () => {
@@ -97,6 +96,10 @@ class Quiz extends Component {
       },
     });
   };
+  componentDidMount() {
+    console.log(this.props);
+    console.log("Quiz ID  =" + this.props.match.params.id);
+  }
 
   render() {
     const activeQuestion = this.state.activeQuestion;
